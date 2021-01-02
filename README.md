@@ -7,3 +7,7 @@
 
 均可使用IDEA的目录创建，注意三层创建时一定要选择父模块为指定的二层的artifactId，且三层的artifactId名字要和目录名相同，并加上二层artifactId的前缀。
 
+## 插件
+推荐安装
+- lombook
+- JMH Java Microbenchmark Harness (并且打开IDEA设置 - Build,Execution,Deployment - Compiler - Annotation Processors)
