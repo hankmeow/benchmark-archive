@@ -1,4 +1,4 @@
-package com.hankmew.library.code.random;
+package com.hankmew.library.code;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.RandomStringUtils;

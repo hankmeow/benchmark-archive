@@ -1,4 +1,4 @@
-package com.hankmew.library.code.random;
+package com.hankmew.library.code;
 
 import org.openjdk.jmh.annotations.*;
 
