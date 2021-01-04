@@ -23,13 +23,6 @@
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
     </properties>
     <dependencies>
-        <!-- test -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.5.2</version>
-            <scope>test</scope>
-        </dependency>
         <!-- mock -->
         <dependency>
             <groupId>org.mockito</groupId>
@@ -54,12 +47,6 @@
             <artifactId>jmh-generator-annprocess</artifactId>
             <version>1.25.2</version>
             <scope>test</scope>
-        </dependency>
-        <!-- json -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.10.3</version>
         </dependency>
         <!-- enhance -->
         <dependency>
