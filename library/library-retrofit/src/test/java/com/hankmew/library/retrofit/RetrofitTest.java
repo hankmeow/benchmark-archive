@@ -4,7 +4,6 @@ import com.hankmew.retrofit.dnspod.InfoVersionRes;
 import com.hankmew.retrofit.dnspod.InfoVersionService;
 import org.junit.jupiter.api.Test;
 import retrofit2.Call;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
@@ -21,7 +20,7 @@ public class RetrofitTest {
         Call<InfoVersionRes> call = service.infoVersion();
         try {
             InfoVersionRes body = call.execute().body();
-            System.out.println(body.getStatus());
+            System.out.println(body);
         } catch (IOException e) {
             e.printStackTrace();
         }
