@@ -14,16 +14,23 @@
         <module>spring-undertow</module>
         <module>spring-mybatis</module>
         <module>spring-redistemplate</module>
-        <module>spring-amqp</module>
+        <module>spring-rabbitmq</module>
         <module>spring-tomcat</module>
+        <module>spring-resttemplate</module>
+        <module>spring-jpa</module>
+        <module>spring-websocket</module>
     </modules>
+
+    <properties>
+        <springboot.version>2.4.1</springboot.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-parent</artifactId>
-                <version>2.4.1</version>
+                <version>${springboot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -51,7 +58,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.4.1</version>
+                <version>${springboot.version}</version>
             </plugin>
         </plugins>
     </build>
