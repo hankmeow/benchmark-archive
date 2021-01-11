@@ -11,7 +11,6 @@
     <artifactId>spring</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-undertow</module>
         <module>spring-mybatis</module>
         <module>spring-redistemplate</module>
         <module>spring-rabbitmq</module>
