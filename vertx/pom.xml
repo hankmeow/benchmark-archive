@@ -10,5 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>vertx</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>vertx-web</module>
+    </modules>
 
 </project>
