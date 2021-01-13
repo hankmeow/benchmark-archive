@@ -3,34 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>benchmark</artifactId>
+        <artifactId>library</artifactId>
         <groupId>com.hankmew.benchmark</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>library</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>library-code</module>
-        <module>library-netty</module>
-        <module>library-retrofit</module>
-        <module>library-redisson</module>
-        <module>library-jackson</module>
-    </modules>
+
+    <artifactId>library-jackson</artifactId>
 
     <dependencies>
-        <!-- test 版本手动与spring项目的保持一致-->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.7.0</version>
-            <scope>test</scope>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.11.3</version>
         </dependency>
-        <!-- json 版本手动与spring项目的保持一致-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.11.3</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.11.3</version>
+        </dependency>
+
     </dependencies>
 </project>
