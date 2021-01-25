@@ -18,6 +18,7 @@
         <module>spring-resttemplate</module>
         <module>spring-jpa</module>
         <module>spring-websocket</module>
+        <module>spring-httpclient</module>
     </modules>
 
     <properties>
