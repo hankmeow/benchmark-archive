@@ -17,6 +17,9 @@ public class Result<T> {
     public static<T> Result<T> failure(Status status) {
         return new Result<>(null, status);
     }
+    public static<T> Result<T> failure() {
+        return new Result<>(null, BasicStatus.FAILURE);
+    }
 
     /* 状态 */
     public boolean isSuccess() {
@@ -58,7 +61,7 @@ public class Result<T> {
     }
 
     public enum BasicStatus implements Result.Status {
-        INTERNAL_SERVER_ERROR, //未知系统异常，出现无法恢复的都使用这个状态即可
+        FAILURE, //未知系统异常，出现无法恢复的都使用这个状态即可
         ;
     }
 }
