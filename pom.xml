@@ -12,6 +12,7 @@
         <module>library</module>
         <module>spring</module>
         <module>vertx</module>
+        <module>spring-archetype</module>
     </modules>
 
     <properties>
