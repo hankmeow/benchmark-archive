@@ -55,6 +55,11 @@
             <version>1.25.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.10</version>
+        </dependency>
         <!-- enhance -->
         <dependency>
             <groupId>org.apache.commons</groupId>
