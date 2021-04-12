@@ -19,6 +19,7 @@
         <module>spring-jpa</module>
         <module>spring-websocket</module>
         <module>spring-httpclient</module>
+        <module>spring-threadpool</module>
     </modules>
 
     <properties>
