@@ -1,14 +1,19 @@
 package com.hankmew.benchmark.spring.threadpool.scheduled;
 
+import com.hankmew.benchmark.spring.threadpool.service.ThreadPoolService;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
+import javax.annotation.Resource;
+
 @Component
+@Slf4j
 public class ThreadPoolScheduled {
+    @Resource
+    private ThreadPoolService threadPoolService;
     /**
      * Async注解会在以下几个场景失效，也就是说明明使用了@Async注解，但就没有走多线程。
      *
@@ -21,8 +26,15 @@ public class ThreadPoolScheduled {
      */
     //注意这里需要指定线程池的名字，否则默认会使用Simple
     @Async("defaultTaskScheduler")
-    @Scheduled(cron = "0/5 * * * * *")
-    public void run() throws InterruptedException {
-        log.info("{} {}", Thread.currentThread().getName(), System.currentTimeMillis());
+    @Scheduled(fixedDelay = 1000, initialDelay = 1000)
+    public void scheduled() throws InterruptedException {
+        //这里可以增加分布式锁的判断代码
+        try {
+            //这里要加try避免业务代码出现问题影响其他线程运行
+            threadPoolService.scheduled();
+        }catch (Exception e) {
+            log.error("定时任务未知错误", e);
+        }
+        //这里可以增加分布式解锁锁的代码
     }
 }
