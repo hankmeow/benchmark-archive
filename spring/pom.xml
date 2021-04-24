@@ -20,6 +20,7 @@
         <module>spring-websocket</module>
         <module>spring-httpclient</module>
         <module>spring-threadpool</module>
+        <module>spring-threadlocal</module>
     </modules>
 
     <properties>
