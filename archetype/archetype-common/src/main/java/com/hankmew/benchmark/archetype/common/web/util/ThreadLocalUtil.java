@@ -1,4 +1,4 @@
-package com.hankmew.benchmark.spring.threadlocal;
+package com.hankmew.benchmark.archetype.common.web.util;
 
 import java.util.HashMap;
 import java.util.Map;

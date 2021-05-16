@@ -1,0 +1,51 @@
+spring:
+  task:
+    # 默认定时任务的公共线程池
+    scheduling:
+      thread-name-prefix: task-
+      pool:
+        size: 2
+    # 默认异步任务的公共线程池
+    execution:
+      thread-name-prefix: exec-
+      pool:
+        core-size: 2
+        max-size: 10
+        queue-capacity: 2
+        keep-alive: 60
+        allow-core-thread-timeout: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+  messages:
+    basename: i18n/messages
+
+threadpool:
+  scheduling:
+    task1:
+      pool-size: 2
+      allow-wait-termination: true
+      allow-wait-termination-timeout-second: 60
+    task2:
+      pool-size: 2
+      allow-wait-termination: true
+      allow-wait-termination-timeout-second: 60
+  execution:
+    exec1:
+      core-size: 2
+      queue-capacity: 2
+      max-size: 10
+      allow-core-thread-timeout: true
+      keep-alive: 60
+      allow-wait-termination: true
+      allow-wait-termination-timeout-second: 60
+    exec2:
+      core-size: 2
+      queue-capacity: 2
+      max-size: 10
+      allow-core-thread-timeout: true
+      keep-alive: 60
+      allow-wait-termination: true
+      allow-wait-termination-timeout-second: 60

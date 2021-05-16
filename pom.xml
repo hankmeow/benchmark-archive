@@ -13,6 +13,7 @@
         <module>spring</module>
         <module>vertx</module>
         <module>spring-archetype</module>
+        <module>archetype</module>
     </modules>
 
     <properties>

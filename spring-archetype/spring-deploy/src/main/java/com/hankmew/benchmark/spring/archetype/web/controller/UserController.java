@@ -16,6 +16,6 @@ public class UserController {
     @GetMapping("/user/query")
     public UserRes queryUser(UserReq req) {
         UserResult userResult = userService.queryUser(req);
-        return userResult;
+        return null;
     }
 }
